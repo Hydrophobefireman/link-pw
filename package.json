@@ -8,7 +8,8 @@
     "start": "cross-env NODE_ENV=development webpack-cli serve",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "prebuild": "tsc --noEmit && node scripts/prebuild.js",
-    "postbuild": "node scripts/postbuild.js"
+    "postbuild": "node scripts/postbuild.js",
+    "prepare": "husky install"
   },
   "author": "Hudrophobefireman",
   "license": "ISC",
@@ -55,7 +56,8 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "husky": "^6.0.0"
   },
   "homepage": "https://github.com/Hydrophobefireman/site#readme"
 }
