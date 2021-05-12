@@ -7,14 +7,15 @@ import {
 } from "@hydrophobefireman/ui-lib";
 
 import { ChunkLoading } from "../ChunkLoadingComponent";
-import { NotFound } from "../../pages/404";
+import { NotFound } from "@/pages/404";
 import { Object_entries as entries } from "@hydrophobefireman/j-utils";
 
 const getDefault: <T>(mod: { default: T }) => T = (mod) => mod.default;
 
 // lazy load routes here
 const componentMap = {
-  "/": () => import("../../pages/Landing").then(getDefault),
+  "/": () => import("@/pages/Landing").then(getDefault),
+  "/_": () => import("@/pages/Decrypt").then(getDefault),
 };
 
 export function RouteLoader() {

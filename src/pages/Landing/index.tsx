@@ -1,18 +1,12 @@
-import { useEffect, useState } from "@hydrophobefireman/ui-lib";
-
-/** Exported routes need to be default exports */
+import { Encrypt } from "@/components/Encrypt/Encrypt";
+import { center } from "@/style";
+import { css } from "catom";
 export default function Landing() {
-  return <Clicker />;
-}
-
-function Clicker() {
-  const [clicks, setClicks] = useState(0);
-  const increment = () => setClicks(clicks + 1);
-
   return (
-    <>
-      <div>Some UI Lib reactive component</div>
-      <button onClick={increment}>Clicked {clicks} time(s)</button>
-    </>
+    <section class={center}>
+      <h1 class={css({ fontSize: "2rem" })}>Secret Links</h1>
+      <div>Paste a link, add a password and you're done.</div>
+      <Encrypt />
+    </section>
   );
 }
