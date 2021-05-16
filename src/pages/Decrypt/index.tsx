@@ -15,6 +15,7 @@ export default function Decrypt() {
     if (!password) return;
     if (!location.hash.length) return setError("Invalid url data");
     let data: any;
+    setError(null);
     try {
       data = JSON.parse(atob(location.hash.substr(1)));
     } catch (e) {
@@ -31,7 +32,7 @@ export default function Decrypt() {
       });
       setResult(response);
     } catch (e) {
-      console.log(e);
+      console.log(e, e.message);
       return setError("Could not decrypt..check your password");
     }
   }
