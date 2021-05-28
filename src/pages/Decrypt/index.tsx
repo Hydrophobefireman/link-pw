@@ -8,7 +8,6 @@ import { useState } from "@hydrophobefireman/ui-lib";
 
 export default function Decrypt() {
   const [password, setPassword] = useState("");
-  const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   async function handleSubmit() {
